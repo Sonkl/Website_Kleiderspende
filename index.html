@@ -1,126 +1,237 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kleiderspende Jena</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <style>
-        
-        .header-img{
-            position:absolute;
-            height: 100vh;
-            width: 100%;
-            object-fit:cover;
-            filter:brightness(0.5)
-        }
-        .headline{
-            position:absolute;
-            top: 120px;
-            color: white;
-            font-size: 50px;
-            width: 100%;
-            text-align:center;
-            text-shadow: 5px 5px rgba(1, 1, 5, 0.5);
-            z-index: 0;
-            
-        }
-        .container-fluid{
-            height: 80px;
-            background-color: rgb(193, 165, 89);
-        }
-
-        .logo{
-            position:absolute;
-            height: 50px;
-            width: 50px;
-            right: 50px;
-            z-index: 10;
-
-            ;
-        }
-
-        .nav-link{
-          font-size: 25px;
-          font-weight: 800;
-          color:rgb(42, 77, 165)
-        }
-
-        .container-fluid{
-          vertical-align:middle;
-          
-        }
-
-        .text{
-          text-align:center;
-          position:absolute;
-          font-size: 40px;
-          width: 250px;
-        }
-
-        .navbar-collapse{
-          background-color: rgb(193, 167, 89);
-          z-index: auto;
-          
-          
-
-        }
-
-        
-        @media (min-width: 660px) { 
-          .headline{
-            font-size: 70px;
-            width: 100%;
-            text-align: center;
-          }
-        }
-        
-       
-        
-
-     
+    <link rel="stylesheet" type="text/css" href="style.css">
     
-      
-
-
-
-
-      
-    
-    </style>
-
 </head>
 
 <body>
-  <h1 class="headline"> Kleiderspende Jena</h1>
+
+  
+  <div id="zumSeitenanfang"></div> 
    
+    <!--Navbar mit globaler Navigation-->
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <img class="logo" src="/img/logo.png">
+        <div class="container-fluid nav">
+
+            <!--Logo-->
+            <img class="logo" src="logo.png">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active, nav-link" aria-current="page" href="#">Startseite</a>
+                <!--Globale Navigation zum Seitenanfang-->
+                <a class="nav-link active, nav-link" aria-current="page" href="#zumSeitenanfang">Start</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Das Team</a>
+                <!--Globale Navigation zum Spendenformular-->
+                <a class="nav-link" href="#formular">Kleiderspende</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Anfahrt</a>
+                <!--Globale Navigation zur Adresse-->
+                <a class="nav-link" href="#adresse">Adresse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+
+      <!--Überschrift-->
+      <h1 class="headline"> Kleiderspende Musterstadt</h1>
+
+
+      <!--Beschreibungstext-->
+      <div class="container-md, beschreibung">Aus den Schuhen rausgewachsen? Die Garderobe aussortiert? Zu alt für den Plüschhasen? <br /> 
+        Wir finden ein neues Zuhause für Ihre Klamotten! <br />
+        Wenn Sie eine Kleiderspende für uns haben und vorbeibringen wollen, können Sie einfach das Tablet an unserer Geschäftsstelle zur Registrierung der Spende nutzen. <br />
+        Sind Sie aus Musterstadt oder der Umgebung, kommen wir die Kleiderspenden auch gerne mit unserem Sammelfahrzeug direkt bei Ihnen abholen. <br />
+        Außerdem haben Sie die Möglichkeit, selbst das Krisengebiet auszuwählen, welches Ihre Spende erhalten soll. <br />
+        Für freuen uns auf Ihre Spenden!
+
+      </div>
+
+      <h2 class="formular" id="formular">Formular für Ihre Kleiderspende</h2>
+
+      <!--Formular für die KLeiderspende mit Validierung und Weiterleitung-->
+      <form action="index2.php" method="get" id ="form" class="needs-validation" novalidate>
+        <div class="container text-center, box">
+          <div class="row">
+            <!--Radiobutton mit der Option "Abholung durch Sammelfahrzeug" vorausgewählt-->
+            <div class="col">
+              <div class="form-check, label">
+                <input class="form-check-input" onclick="mitAbholung()" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                 Abholung durch Sammelfahrzeug
+                </label>
+             </div>
+
+             <div class="form-check, label">
+                <input class="form-check-input" onclick="ohneAbholung()" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Übergabe an der Geschäftsstelle
+                </label>
+              </div>
+            </div>
+
+            <!--Textfeld zur Angabe der zu spendenden Kleidung-->
+            <div class="col">
+              <div>  
+                <div class="form-floating">
+                  <textarea class="form-control" name="kleidung"  id="artDerKleidung" style="height: 100px" required></textarea>
+                  <label for="floatingTextarea2">Art der Kleidung</label>
+                </div>	
+              </div> 
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Dropdownmenü zur Auswahl eines Krisengebiets-->
+          <div class="col">
+            <select class="form-select" name="krisengebiet" id="krisengebiet" required>
+              <option selected disabled value="">Krisengebiet</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Äthiopien">Äthiopien</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Iran">Iran</option>
+              <option value="Mosambik">Mosambik</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Simbabwe">Simbabwe</option>
+              <option value="Somalia">Somalia</option>
+              <option value="Syrien">Syrien</option>            
+              <option value="Ukraine">Ukraine</option>
+            </select>
+          </div>
+        </div>
+        <!-- Eingabefelder zur Angabe persönlicher Daten (Vorname, Nachname, Straße, Hausnummer, PLZ, Ort)-->
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Vorname" id="vorname"  required> 
+              </div>
+              <div class="col">  
+                <input type="text" class="form-control" id="nachname" placeholder="Nachname"  required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="straße" placeholder="Straße" required>
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" id="hausnummer" placeholder="Hausnummer" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <!-- Die eingegebene PLZ wird auf Übereinastimmung mit dem Pattern "98..." überprüft-->
+                <input type="text" class="form-control" id="postleitzahl" placeholder="Postleitzahl" pattern="98..." required>
+                <div class="invalid-feedback">
+                  Der Abholort muss in unserem Postleitzahl Bereich liegen!
+               </div>
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" id="ort" placeholder="Ort" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="col-md-12">
+              <button class="btn btn-primary" type="submit">Abschicken</button>
+            </div>  
+          </div>  
+        </div>    
+      </div>
+    </form>
+
+    <p class="adresse" id="adresse">Unsere Adresse: Musterstraße 0, 98078 Musterstadt</p>
+
+    <!-- Footer mit Namen der Autorin und Angabe der Quelle für das Hintergrundbild-->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            Autor: Sonja Hankl
+          </div>
+          <div class="col">
+            <a>Hintergrundbild: pixaxabay.com</a>
+          </div>
+      </div>
+    </footer>    
+
+    <!--Java Script-->
+    <script>
+
+      //Bei Klick auf den Radiobutton "Übergabe an der Geschäftsstelle" werden die Eingabefelder für die persönlichen Daten deaktiviert
+      function ohneAbholung(){
+          document.getElementById("vorname").disabled = true;
+          document.getElementById("nachname").disabled = true;
+          document.getElementById("straße").disabled = true;
+          document.getElementById("hausnummer").disabled = true;
+          document.getElementById("postleitzahl").disabled = true;
+          document.getElementById("ort").disabled = true;
+          document.getElementById("email").disabled = true;
+          
+      }
+      //Bei Klick auf den Radiobutton "Abholung durch Sammelfahrzeug" werden die Eingabefelder für die persönlichen Daten aktiviert
+      function mitAbholung(){
+        document.getElementById("vorname").disabled = false;
+        document.getElementById("nachname").disabled = false;
+          document.getElementById("straße").disabled = false;
+          document.getElementById("hausnummer").disabled = false;
+          document.getElementById("postleitzahl").disabled = false;
+          document.getElementById("ort").disabled = false;
+          document.getElementById("email").disabled = false;
+          
+      }
+   
+  //Bei Klick auf den Submitt-Button wird überprüft, ob alle Elemente im Formular "valid" sind und leitet erst weiter, wenn dies zutrifft
+  //Die validierten und nicht validierten Elemente werden angezeigt
   
-      <img src="/img/hintergrundbild.jpg" class="img-fluid" alt="...">
-      
+     (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  
      
+   </script>
+    
      
 </body>
 </html>

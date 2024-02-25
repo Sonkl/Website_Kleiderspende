@@ -24,6 +24,9 @@
       
   }
 
+  
+
+
   .formular{
     padding: 4%;
       color: white;
@@ -62,7 +65,7 @@
   .nav-link{
     font-size: 1rem;
     font-weight: 800;
-    color:rgb(28, 48, 29)
+    color:rgb(28, 48, 29);
     
   }
   .nav-link:hover{
@@ -78,7 +81,9 @@
   .beschreibung{
     text-align:center;
     font-size:1rem;
-    color:rgba(1, 1, 5, 1)
+    color:aliceblue;
+    background: rgb(15, 28, 40);
+    padding: 1rem;
     
   }
 
@@ -87,9 +92,13 @@
     z-index: auto;
     }
 
-  .btn{
-    align-items: right;
+  
+  .adresse{
+    text-align: center;
+    color: aliceblue;
+    padding: 2rem;
   }
+  
   
   .footer{
     background-color: rgb(193, 167, 89);
@@ -111,7 +120,8 @@
       text-align: center;
     }
 
-    .container-fluid{
+
+    .nav{
       height: 3rem;
       width: 100%;
     }
