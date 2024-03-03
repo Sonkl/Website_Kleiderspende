@@ -28,9 +28,9 @@
 
 
   .formular{
-    padding: 4%;
+      padding: 2%;
       color: white;
-      font-size: 50px;
+      font-size: 30px;
       width: 100%;
       text-align:center;
   }
@@ -118,6 +118,11 @@
       font-size: 70px;
       width: 100%;
       text-align: center;
+    }
+
+    .formular{
+      padding: 4%;
+      font-size: 50px;
     }
 
 
