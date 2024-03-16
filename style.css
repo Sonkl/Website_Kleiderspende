@@ -1,6 +1,7 @@
 
 @charset "utf-8";
 
+  /* Hintergrundbild */
   body{
     height: 100%;
     background-image: url("hintergrundbild.jpg");
@@ -14,7 +15,7 @@
     --bs-gutter-y: 4;
   }
   
-
+  /* Hauptüberschrift */
   .headline{
       padding: 6%;
       color: white;
@@ -26,7 +27,7 @@
       
   }
  
-
+  /* Unterüberschrift */
   .formular{
       padding: 2%;
       color: white;
@@ -35,7 +36,7 @@
       text-align:center;
   }
 
-
+  /* Registrierungsformular*/
   .box{
     background: rgb(15, 28, 40);
     width: 100%;
@@ -43,12 +44,12 @@
     padding: 2rem;
   }
 
-
+  /* Beschriftung der Eingabefelder des Formulars */
   .label{
     color:rgb(255, 247, 240);
   }
 
-
+  /* container-fluid hat eine Breite von 100% bei jeder Bildschirmgröße */
   .container-fluid{
       top: 0.002%;
       height: 4rem;
@@ -56,7 +57,7 @@
       position: fixed;      
   }
 
-
+  /* Logo der Website */
   .logo{
       position:absolute;
       height: 30px;
@@ -65,14 +66,14 @@
       z-index: 10;
   }
 
-
+  /* Schriftfarbe und -größe der Navbar */
   .nav-link{
     font-size: 1rem;
     font-weight: 800;
     color:rgb(28, 48, 29);
-    
-
   }
+
+  /* Farbe der Navbar-Links bei Mouseover */
   .nav-link:hover{
     color: aliceblue;
   }
@@ -84,7 +85,7 @@
     
   }
 
-
+  /* Beschreibungstext */
   .beschreibung{
     text-align:center;
     font-size:1rem;
@@ -94,21 +95,21 @@
     
   }
 
-
+  /* Hintergrundfarbe der Navbar */
   .navbar-collapse{
     background-color: rgb(193, 167, 89);
-    z-index: auto;
+    
     
     }
 
-  
+  /* Gestaltung der Adresse */
   .adresse{
     text-align: center;
     color: aliceblue;
     padding: 2rem;
   }
   
-  
+  /* Gestaltung des Footers */
   .footer{
     background-color: rgb(193, 167, 89);
     height: 1.2rem;
@@ -119,7 +120,7 @@
     font-size: 0.7rem;
   }
 
-  
+  /* CSS Regeln ab einer Mindestbildschirmbreite von 670px*/
   @media (min-width: 670px) { 
     .headline{
       padding: 3%;
@@ -159,7 +160,7 @@
     }
   }
 
-  
+  /* CSS Regeln ab einer Mindestbildschirmbreite von 990px*/
   @media (min-width: 990px){
    .headline{
     padding: 2%;
