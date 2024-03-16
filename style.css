@@ -9,10 +9,12 @@
     background-attachment: fixed;
   }
 
+
   .row{
     --bs-gutter-y: 4;
   }
   
+
   .headline{
       padding: 6%;
       color: white;
@@ -23,9 +25,7 @@
       z-index: 0;
       
   }
-
-  
-
+ 
 
   .formular{
       padding: 2%;
@@ -43,9 +43,11 @@
     padding: 2rem;
   }
 
+
   .label{
     color:rgb(255, 247, 240);
   }
+
 
   .container-fluid{
       top: 0.002%;
@@ -54,29 +56,34 @@
       position: fixed;      
   }
 
+
   .logo{
       position:absolute;
       height: 30px;
       width: 30px;
-      right: 50px;
+      right: 20px;
       z-index: 10;
   }
+
 
   .nav-link{
     font-size: 1rem;
     font-weight: 800;
     color:rgb(28, 48, 29);
     
+
   }
   .nav-link:hover{
     color: aliceblue;
   }
+
 
   .container-fluid{
     height: 3rem;
     vertical-align:middle;
     
   }
+
 
   .beschreibung{
     text-align:center;
@@ -87,9 +94,11 @@
     
   }
 
+
   .navbar-collapse{
     background-color: rgb(193, 167, 89);
     z-index: auto;
+    
     }
 
   
@@ -111,7 +120,6 @@
   }
 
   
-  
   @media (min-width: 670px) { 
     .headline{
       padding: 3%;
@@ -119,6 +127,7 @@
       width: 100%;
       text-align: center;
     }
+
 
     .formular{
       padding: 4%;
@@ -138,16 +147,19 @@
       right: 40px;
     }
 
+
     .footer{
       height: 2rem;
       font-size: 1rem;
     }
+
 
     .nav-link{
       font-size:1.5rem;
     }
   }
 
+  
   @media (min-width: 990px){
    .headline{
     padding: 2%;

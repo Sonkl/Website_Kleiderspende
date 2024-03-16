@@ -60,7 +60,7 @@
         <div class="row">
           <div class="col">
           <label class="label" for="floatingTextArea2">Datum</label>
-          <input class="form-control" type="text" value="<?php echo "Jena, den " . date("d.m.Y H:i:s"); ?>" id="floatingTextArea2" readonly>
+          <input class="form-control" type="text" value="<?php echo "Musterstadt, den " . date("d.m.Y H:i:s"); ?>" id="floatingTextArea2" readonly>
             
           </div>
         </div>
