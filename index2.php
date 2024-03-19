@@ -42,7 +42,7 @@
             <div class="col">
               <div class="form-check, label">
                 <label class="label" for="floatingTextArea2"> Art der Kleidung</label>
-                <input class="form-control" type="text" value="<?php echo htmlspecialchars($_GET ['kleidung']); ?>" id="floatingTextArea2" readonly>
+                <input class="form-control" type="textarea" value="<?php echo htmlspecialchars($_GET ['kleidung']); ?>" id="floatingTextArea2" readonly>
                 
              </div>
             </div>
